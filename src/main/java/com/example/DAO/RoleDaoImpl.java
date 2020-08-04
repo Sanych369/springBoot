@@ -6,15 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Repository
 public class RoleDaoImpl implements RoleDao {
 
     @Autowired
     EntityManager entityManager;
+
     @Override
     public Role findByRole(String role) {
         TypedQuery<Role> query = entityManager.createQuery("from Role where role = :role", Role.class);
@@ -31,8 +30,7 @@ public class RoleDaoImpl implements RoleDao {
 
     @Override
     public List<Role> getAllRoles() {
-        TypedQuery<Role> query =  entityManager.createQuery("from Role", Role.class);
+        TypedQuery<Role> query = entityManager.createQuery("from Role", Role.class);
         return query.getResultList();
     }
-
 }

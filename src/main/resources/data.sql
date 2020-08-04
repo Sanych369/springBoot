@@ -1,13 +1,15 @@
+-- Drop tables
 DROP TABLE if exists user_roles;
 DROP TABLE if exists roles;
 DROP TABLE if exists users;
+
 -- Table: users
 CREATE TABLE users
 (
     id       INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
     login    VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    email    VARCHAR(255) NOT NULL
 )
     ENGINE = InnoDB;
 
