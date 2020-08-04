@@ -1,16 +1,12 @@
 package com.example.DAO;
 
-import com.example.model.Role;
 import com.example.model.User;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Repository
 public class UserDaoImpl implements UserDao {

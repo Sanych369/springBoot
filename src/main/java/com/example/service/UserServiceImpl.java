@@ -9,10 +9,7 @@ import com.example.DAO.UserRolesDao;
 import com.example.model.Role;
 import com.example.model.User;
 
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -23,6 +20,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleDao roleDao;
 
+    @Autowired
     private UserRolesDao userRolesDao;
 
     @Override

@@ -37,7 +37,7 @@ public class MainController {
     @GetMapping("admin")
     public String showUsersTable(ModelMap model) {
         model.addAttribute("users", userService.getAllUsers());
-        return "index.html";
+        return "index";
     }
 
     @GetMapping("signup")

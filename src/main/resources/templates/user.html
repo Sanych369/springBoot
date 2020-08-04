@@ -2,19 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Инфо о пользователе</title>
+    <div align="center"><a href="/logout">Logout</a></div>
 </head>
 <body>
-<div>
-    Login: <b th:text="${user.login}"></b>
-    <br>
-    Password: <b th:text="${user.password}"></b>
-    <br>
-    Email: <b th:text="${user.email}"></b>
-    <br>
-    Group: <b th:text="${user.getRoles()}"></b>
-    <br>
-    <a href="/logout">Logout</a>
+<div align="center">
+    <table border="1" cellpadding="5">
+        <h2>Информация о пользователе:</h2>
+        <tr><th>Логин: <b th:text="${user.login}"></b></th></tr>
+        <tr><th>Пароль: <b th:text="${user.password}"></b>
+        <tr><th>Email: <b th:text="${user.email}"></b></th></tr>
+        <tr><th>Группа: <b th:text="${user.getRoles()}"></b></th></tr>
+    </table>
 </div>
 </body>
 </html>
